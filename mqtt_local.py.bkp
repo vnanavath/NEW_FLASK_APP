@@ -1,0 +1,65 @@
+
+
+
+#*****************************************************
+"""mqtt server connections and mqtt built in methods"""
+import time
+from uuid import uuid4
+import paho.mqtt.client as mqtt
+# from ..common import logger, util, constants
+# from ..config import config
+# from ..service.db_operations import save_all_responses_to_db,  get_org_id
+# from ..controller.radio_communication import send_rtk_pkts_callback
+# from ..controller.radio_operations import radio_hb_enabler
+from app import logger
+
+def get_32_hex_uuid():
+    return uuid4().hex
+
+
+CLIENT = mqtt.Client(f"flask_app{get_32_hex_uuid()}")
+
+# ORG_ID = get_org_id()
+from Todo.methods import create_data
+# Local MQTT subscribers
+MQTT_SUBSCRIBERS = {
+    # constants.PUB_TOPIC: save_all_responses_to_db,
+    # constants.MOS_EVENTS.format(ORG_ID): save_all_responses_to_db,
+    # constants.RTK_TOPIC: send_rtk_pkts_callback,
+    # constants.RADIO_ENABLE_TOPIC: radio_hb_enabler
+    "sample":create_data,
+}
+
+
+def init_mqtt():
+    """MQTT client connections."""
+    try:
+        broker = "127.0.0.1"
+        CLIENT.connect(broker)
+        CLIENT.on_connect = on_connect
+        CLIENT.on_disconnect = on_disconnect
+        CLIENT.loop_start()
+    except Exception as err:
+        logger.error("Mqtt Error in init_mqtt-" + str(err))
+
+
+def on_connect(client, userdata, flags, rc):
+    try:
+        logger.info("client is connected rc:{0} , flags: {1}".format(rc, flags))
+        for topic, func in MQTT_SUBSCRIBERS.items():
+            CLIENT.subscribe(topic, 0)
+            CLIENT.message_callback_add(topic, func)
+            logger.info(f"subscribed to mqtt topic: {topic}")
+    except Exception as err:
+        logger.error("Mqtt Error in on_connect-" + str(err))
+
+
+def on_disconnect(client, userdata, rc):
+    """on mqtt disconnect this method is called."""
+    try:
+        ctime = time.ctime()
+        logger.info("Time of disconnect is :{0}".format(ctime))
+        logger.info("Client is disconnected :{0}".format(rc))
+        client.reconnect()
+    except Exception as err:
+        logger.error("Mqtt Error in on_disconnect-" + str(err))

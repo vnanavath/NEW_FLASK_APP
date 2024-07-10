@@ -1,0 +1,259 @@
+2024-06-30 20:14:00,118 - __main__ - INFO - Connected to broker
+2024-06-30 20:16:01,095 - __main__ - INFO - Task created successfully with id: 120
+2024-06-30 20:17:56,616 - __main__ - INFO - Task created successfully with id: 121
+2024-06-30 21:10:24,699 - __main__ - INFO - Connected to broker
+2024-06-30 21:10:38,052 - __main__ - INFO - Connected to broker
+2024-06-30 21:11:14,999 - __main__ - INFO - Task created successfully with id: 122
+2024-06-30 21:13:46,071 - __main__ - INFO - Task created successfully with id: 123
+2024-06-30 21:18:33,130 - __main__ - INFO - Connected to broker
+2024-06-30 21:18:56,542 - __main__ - INFO - Task created successfully with id: 124
+2024-06-30 21:37:43,964 - __main__ - INFO - Connected to broker
+2024-06-30 21:45:38,515 - __main__ - INFO - Connected to broker
+2024-06-30 21:46:35,424 - __main__ - INFO - Task updated successfully for id: 118
+2024-06-30 21:48:02,728 - __main__ - INFO - Task updated successfully for id: 119
+2024-06-30 21:53:09,452 - __main__ - INFO - Task created successfully with id: 125
+2024-06-30 21:54:19,627 - __main__ - INFO - Task updated successfully for id: 125
+2024-06-30 22:08:22,328 - __main__ - INFO - Connected to broker
+2024-06-30 22:09:42,091 - __main__ - INFO - Task deleted successfully for id: 120
+2024-06-30 22:25:58,078 - __main__ - INFO - Connected to broker
+2024-06-30 22:28:03,874 - __main__ - INFO - Connected to broker
+2024-06-30 22:28:15,666 - __main__ - INFO - Fetched all the todo's
+2024-06-30 22:38:41,335 - __main__ - INFO - Connected to broker
+2024-07-01 11:43:09,437 - app - INFO - Connected to broker
+2024-07-01 11:43:10,439 - __main__ - INFO - Connected to broker
+2024-07-01 11:43:54,107 - app - INFO - Connected to broker
+2024-07-01 11:47:45,816 - app - INFO - Connected to broker
+2024-07-01 17:46:36,258 - app - INFO - Connected to broker
+2024-07-01 17:46:55,143 - __main__ - INFO - Connected to broker
+2024-07-01 17:48:39,077 - __main__ - INFO - Connected to broker
+2024-07-01 17:58:44,166 - app - INFO - Connected to broker
+2024-07-02 14:30:34,426 - app - INFO - Connected to broker
+2024-07-02 14:30:50,161 - app - INFO - Connected to broker
+2024-07-02 16:06:27,532 - __main__ - INFO - Connected to broker
+2024-07-02 16:06:32,159 - __main__ - INFO - Todo assigned suceessfully for employee:1
+2024-07-02 16:10:42,514 - __main__ - INFO - Todo assigned suceessfully for employee:1
+2024-07-02 16:11:00,355 - __main__ - INFO - Todo assigned suceessfully for employee:1
+2024-07-02 16:11:20,523 - __main__ - INFO - Todo assigned suceessfully for employee:2
+2024-07-02 16:11:35,474 - __main__ - INFO - Todo assigned suceessfully for employee:2
+2024-07-02 16:11:43,583 - __main__ - INFO - Todo assigned suceessfully for employee:2
+2024-07-02 16:11:48,383 - __main__ - INFO - Todo assigned suceessfully for employee:2
+2024-07-02 16:25:12,147 - __main__ - INFO - Connected to broker
+2024-07-02 16:28:08,486 - __main__ - INFO - Connected to broker
+2024-07-02 16:28:44,596 - __main__ - INFO - Connected to broker
+2024-07-04 02:58:18,737 - app - INFO - Connected to broker
+2024-07-04 02:59:03,275 - app - INFO - Connected to broker
+2024-07-04 03:01:30,074 - app - INFO - Connected to broker
+2024-07-04 03:02:15,821 - app - INFO - Connected to broker
+2024-07-04 03:18:34,080 - app - INFO - Connected to broker
+2024-07-04 03:19:50,562 - app - INFO - Connected to broker
+2024-07-04 10:59:29,498 - app - INFO - Connected to broker
+2024-07-04 11:02:39,147 - app - INFO - Employee updated suceessfully for id:1
+2024-07-04 11:02:58,181 - app - INFO - Employee updated suceessfully for id:1
+2024-07-04 11:53:23,770 - app - INFO - Connected to broker
+2024-07-04 11:54:58,253 - app - INFO - Connected to broker
+2024-07-04 11:55:58,802 - app - INFO - Connected to broker
+2024-07-04 11:57:19,754 - app - INFO - Connected to broker
+2024-07-04 12:05:23,034 - app - INFO - Connected to broker
+2024-07-04 12:05:35,734 - app - ERROR - Failed to create employee: 'Employee' object has no attribute 'employee_id'
+2024-07-04 12:05:35,734 - app - INFO - Employee creation failed
+2024-07-04 12:07:37,794 - app - INFO - Connected to broker
+2024-07-04 12:08:04,979 - app - INFO - employee created successfully with id: 4
+2024-07-04 12:08:25,725 - app - INFO - employee created successfully with id: 5
+2024-07-04 12:09:28,430 - app - INFO - Employee deleted successfully for id: 5
+2024-07-04 12:11:22,379 - app - INFO - Fetched all the employees
+2024-07-04 12:19:40,770 - app - INFO - Connected to broker
+2024-07-04 12:22:05,698 - app - ERROR - Failed to create task: Foreign key associated with column 'todo.employee_id' could not find table 'employee' with which to generate a foreign key to target column 'emp_id'
+2024-07-04 12:26:23,538 - app - INFO - Connected to broker
+2024-07-04 12:26:32,329 - app - INFO - Task created successfully with id: 126
+2024-07-04 12:27:15,441 - app - INFO - Connected to broker
+2024-07-04 12:27:24,894 - app - INFO - Task created successfully with id: 127
+2024-07-04 12:28:46,896 - app - INFO - Connected to broker
+2024-07-04 12:28:56,096 - app - ERROR - Failed to create task: Foreign key associated with column 'todo.employee_id' could not find table 'employee' with which to generate a foreign key to target column 'emp_id'
+2024-07-04 12:32:12,519 - app - INFO - Connected to broker
+2024-07-04 12:32:22,939 - app - ERROR - Failed to create task: Foreign key associated with column 'todo.employee_id' could not find table 'employee' with which to generate a foreign key to target column 'emp_id'
+2024-07-04 12:33:16,812 - app - INFO - Connected to broker
+2024-07-04 12:33:48,927 - app - ERROR - Failed to create task: Foreign key associated with column 'todo.employee_id' could not find table 'employee' with which to generate a foreign key to target column 'emp_id'
+2024-07-04 12:34:12,322 - app - INFO - Connected to broker
+2024-07-04 12:34:16,338 - app - INFO - Task created successfully with id: 128
+2024-07-04 12:35:08,476 - app - INFO - Connected to broker
+2024-07-04 12:35:23,024 - app - ERROR - Failed to create task: Foreign key associated with column 'todo.employee_id' could not find table 'employee' with which to generate a foreign key to target column 'emp_id'
+2024-07-04 12:35:44,503 - app - INFO - Connected to broker
+2024-07-04 12:36:00,591 - app - INFO - Task created successfully with id: 129
+2024-07-04 12:36:14,602 - app - INFO - Connected to broker
+2024-07-04 12:36:50,887 - app - INFO - Task created successfully with id: 130
+2024-07-04 13:54:39,213 - app - INFO - Connected to broker
+2024-07-04 13:59:31,222 - app - INFO - Todo assigned suceessfully for employee:3
+2024-07-04 14:02:29,879 - app - INFO - Todo assigned suceessfully for employee:3
+2024-07-04 14:02:59,800 - app - INFO - Todo assigned suceessfully for employee:4
+2024-07-04 14:03:06,699 - app - INFO - Todo assigned suceessfully for employee:4
+2024-07-04 14:03:17,641 - app - INFO - Todo assigned suceessfully for employee:4
+2024-07-04 14:09:07,673 - app - INFO - Connected to broker
+2024-07-04 14:09:11,330 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 14:09:11,330 - app - INFO - Updation of task failed for task id: 1126
+2024-07-04 14:09:29,385 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 14:09:29,385 - app - INFO - Updation of task failed for task id: 126
+2024-07-04 14:10:59,666 - app - INFO - Connected to broker
+2024-07-04 14:11:04,452 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 14:11:04,452 - app - INFO - Updation of task failed for task id: 126
+2024-07-04 14:12:54,434 - app - INFO - Connected to broker
+2024-07-04 14:13:00,227 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 14:13:00,227 - app - INFO - Updation of task failed for task id: 126
+2024-07-04 14:47:11,446 - app - INFO - Connected to broker
+2024-07-04 14:47:16,459 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 14:47:16,459 - app - INFO - Updation of task failed for task id: 126
+2024-07-04 14:48:04,467 - app - INFO - Connected to broker
+2024-07-04 14:49:03,716 - app - INFO - Connected to broker
+2024-07-04 14:50:18,362 - app - INFO - Connected to broker
+2024-07-04 14:50:21,873 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 14:50:21,873 - app - INFO - Updation of task failed for task
+2024-07-04 14:51:05,166 - app - INFO - Connected to broker
+2024-07-04 14:51:08,974 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 14:51:08,974 - app - INFO - Updation of task failed for task
+2024-07-04 14:54:38,197 - app - INFO - Connected to broker
+2024-07-04 14:54:41,027 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 14:54:41,028 - app - INFO - Updation of task failed for task
+2024-07-04 14:57:18,178 - app - INFO - Connected to broker
+2024-07-04 14:57:20,744 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 14:57:20,744 - app - INFO - Updation of task failed for task
+2024-07-04 14:58:42,932 - app - INFO - Connected to broker
+2024-07-04 14:58:45,728 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 14:58:45,728 - app - INFO - Updation of task failed for task
+2024-07-04 14:59:24,782 - app - INFO - Connected to broker
+2024-07-04 14:59:27,290 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 14:59:27,290 - app - INFO - Updation of task failed for task
+2024-07-04 15:00:18,396 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 15:00:18,396 - app - INFO - Updation of task failed for task
+2024-07-04 15:00:26,620 - app - INFO - Connected to broker
+2024-07-04 15:00:29,109 - app - ERROR - Failed to update todo: local variable 'employee_id' referenced before assignment
+2024-07-04 15:00:29,110 - app - INFO - Updation of task failed for task
+2024-07-04 15:00:47,530 - app - ERROR - Failed to update todo: local variable 'employee_id' referenced before assignment
+2024-07-04 15:00:47,530 - app - INFO - Updation of task failed for task
+2024-07-04 15:02:09,044 - app - INFO - Connected to broker
+2024-07-04 15:02:11,176 - app - ERROR - Failed to update todo: local variable 'employee_id' referenced before assignment
+2024-07-04 15:02:11,177 - app - INFO - Updation of task failed for task
+2024-07-04 15:02:40,984 - app - INFO - Connected to broker
+2024-07-04 15:02:43,281 - app - ERROR - Failed to update todo: local variable 'employee_id' referenced before assignment
+2024-07-04 15:02:43,281 - app - INFO - Updation of task failed for task
+2024-07-04 15:04:29,600 - app - INFO - Connected to broker
+2024-07-04 15:04:33,224 - app - ERROR - Failed to update todo: invalid literal for int() with base 10: 'None'
+2024-07-04 15:04:33,224 - app - INFO - Updation of task failed for task
+2024-07-04 15:07:24,575 - app - INFO - Connected to broker
+2024-07-04 15:07:28,031 - app - INFO - Task updated successfully for id: 126
+2024-07-04 15:13:14,287 - app - INFO - Connected to broker
+2024-07-04 15:13:56,242 - app - INFO - Task deleted successfully for id: 130
+2024-07-04 15:18:00,554 - app - INFO - Connected to broker
+2024-07-04 15:21:50,358 - app - INFO - Connected to broker
+2024-07-04 15:22:17,799 - app - INFO - Connected to broker
+2024-07-04 15:24:17,264 - app - INFO - Connected to broker
+2024-07-04 15:24:20,528 - app - INFO - Fetched all the todo's of employee 32024-07-04 16:50:03,110 - app - INFO - Connected to broker
+2024-07-04 16:50:03,119 - app - INFO - Connected to broker
+2024-07-04 18:30:30,282 - app - INFO - Connected to broker
+2024-07-04 18:31:55,296 - app - INFO - Connected to broker
+2024-07-04 18:33:31,624 - app - INFO - Connected to broker
+2024-07-08 12:15:24,689 - app - INFO - Task created successfully with id: 131
+2024-07-08 12:15:55,338 - app - INFO - Connected to broker
+2024-07-08 12:16:03,854 - app - INFO - Task created successfully with id: 132
+2024-07-08 12:25:10,708 - app - INFO - Task deleted successfully for id: 128
+2024-07-08 12:25:35,800 - app - INFO - Task deleted successfully for id: 127
+2024-07-08 14:09:14,293 - app - INFO - Connected to broker
+2024-07-08 14:09:28,931 - app - INFO - Connected to broker
+2024-07-08 14:09:37,947 - app - INFO - Connected to broker
+2024-07-08 14:09:38,949 - app - INFO - Connected to broker
+2024-07-08 14:09:39,950 - app - INFO - Connected to broker
+2024-07-08 14:09:40,952 - app - INFO - Connected to broker
+2024-07-08 14:09:41,804 - app - INFO - Task created successfully with id: 133
+2024-07-08 14:09:41,954 - app - INFO - Connected to broker
+2024-07-08 14:57:58,233 - app - INFO - M : Connected to broker
+2024-07-08 14:58:05,248 - app - INFO - M : Connected to broker
+2024-07-08 14:58:06,249 - app - INFO - M : Connected to broker
+2024-07-08 14:58:07,252 - app - INFO - M : Connected to broker2024-07-08 15:06:14,374 - app - INFO - M : Connected to broker
+2024-07-08 15:06:15,106 - app - INFO - M : Connected to broker
+2024-07-08 15:17:48,729 - app - INFO - M : Connected to broker
+2024-07-08 15:19:29,529 - app - INFO - M : Connected to broker
+2024-07-08 15:22:36,139 - app - INFO - M : Connected to broker
+2024-07-08 15:40:19,883 - app - INFO - client is connected rc:0 , flags: {'session present': 0}
+2024-07-08 15:40:19,883 - app - INFO - subscribed to mqtt topic: sample
+2024-07-08 15:41:10,729 - app - INFO - client is connected rc:0 , flags: {'session present': 0}
+2024-07-08 15:41:10,729 - app - INFO - subscribed to mqtt topic: sample
+2024-07-08 16:05:05,230 - app - INFO - client is connected rc:0 , flags: {'session present': 0}
+2024-07-08 16:05:05,230 - app - INFO - subscribed to mqtt topic: sample
+2024-07-09 00:21:43,632 - app - INFO - Connected to broker
+2024-07-09 00:31:45,664 - app - INFO - Connected to broker
+2024-07-09 00:48:50,033 - app - INFO - Connected to broker
+2024-07-09 00:54:25,885 - app - INFO - Connected to broker
+2024-07-09 00:59:47,787 - app - INFO - Connected to broker
+2024-07-09 01:00:48,471 - app - INFO - Connected to broker
+2024-07-09 01:02:51,340 - app - INFO - Connected to broker
+2024-07-09 01:03:56,693 - app - INFO - Connected to broker
+2024-07-09 01:04:17,677 - app - INFO - Connected to broker
+2024-07-09 01:06:11,276 - app - INFO - Connected to broker
+2024-07-09 10:43:35,569 - app - INFO - Connected to broker
+2024-07-09 10:54:53,964 - app - INFO - Connected to broker
+2024-07-09 10:58:33,417 - app - INFO - Connected to broker
+2024-07-09 11:00:53,064 - app - INFO - Connected to broker
+2024-07-09 11:01:46,107 - app - INFO - Connected to broker
+2024-07-09 11:02:08,303 - app - INFO - Connected to broker
+2024-07-09 11:26:39,672 - app - INFO - Connected to broker
+2024-07-09 11:26:40,695 - app - INFO - Task created successfully with id: 139
+2024-07-09 11:28:15,003 - app - INFO - Connected to broker
+2024-07-09 11:28:16,020 - app - INFO - Task created successfully with id: 140
+2024-07-09 11:53:16,179 - app - INFO - Connected to broker
+2024-07-09 11:53:17,198 - app - INFO - Task created successfully with id: 141
+2024-07-09 12:17:38,356 - app - INFO - Connected to broker
+2024-07-09 12:19:12,950 - app - INFO - Task created successfully with id: 142
+2024-07-09 12:19:48,446 - app - INFO - Todo assigned suceessfully for employee:1
+2024-07-09 12:30:07,224 - app - INFO - Connected to broker
+2024-07-09 12:33:45,020 - app - INFO - Connected to broker
+2024-07-09 12:36:20,288 - app - INFO - Connected to broker
+2024-07-09 12:38:54,103 - app - INFO - Connected to broker
+2024-07-09 12:38:59,127 - app - INFO - Task deleted successfully for id: 123
+2024-07-09 12:39:56,703 - app - INFO - Connected to broker
+2024-07-09 12:39:58,726 - app - INFO - Task deleted successfully for id: 124
+2024-07-09 12:44:27,446 - app - INFO - Connected to broker
+2024-07-09 12:45:03,496 - app - INFO - Connected to broker
+2024-07-09 12:45:31,540 - app - INFO - Connected to broker
+2024-07-09 14:04:47,070 - app - INFO - Connected to broker
+2024-07-09 14:05:59,772 - app - INFO - Connected to broker
+2024-07-09 14:08:09,039 - app - INFO - Connected to broker
+2024-07-09 14:08:50,118 - app - INFO - Connected to broker
+2024-07-09 14:09:54,571 - app - INFO - Connected to broker
+2024-07-09 14:10:37,599 - app - INFO - Task deleted successfully for id: 126
+2024-07-09 14:10:37,599 - app - INFO - Task deleted successfully for id: 126
+2024-07-09 14:10:37,599 - app - INFO - Task deleted successfully for id: 126
+2024-07-09 14:10:37,643 - app - INFO - Task deleted successfully for id: 126
+2024-07-09 14:15:17,003 - app - INFO - Task updated successfully for id: 118
+2024-07-09 14:15:17,003 - app - INFO - Task updated successfully for id: 118
+2024-07-09 14:15:17,004 - app - INFO - Task updated successfully for id: 118
+2024-07-09 14:15:17,051 - app - INFO - Task updated successfully for id: 118
+2024-07-09 14:22:02,900 - app - INFO - Connected to broker
+2024-07-09 14:23:21,826 - logger - INFO - Connected to broker
+2024-07-09 14:23:42,176 - logger - INFO - Connected to broker
+2024-07-09 14:23:42,443 - logger - INFO - Connected to broker
+2024-07-09 14:24:12,290 - logger - INFO - Connected to broker
+2024-07-09 14:28:09,820 - logger - INFO - Connected to broker
+2024-07-09 14:28:19,819 - logger - INFO - Connected to broker
+2024-07-10 00:41:33,067 - logger - INFO - Connected to broker
+2024-07-10 00:41:33,068 - logger - INFO - Connected to broker
+2024-07-10 00:43:36,512 - logger - INFO - Connected to broker
+2024-07-10 00:44:14,349 - logger - INFO - Task created successfully with id: 149
+2024-07-10 00:44:14,360 - logger - INFO - Connected to broker
+2024-07-10 00:44:14,391 - logger - INFO - Task created successfully with id: 150
+2024-07-10 01:06:55,003 - logger - INFO - Connected to broker
+2024-07-10 01:07:01,448 - logger - INFO - Connected to broker
+2024-07-10 01:28:47,774 - logger - INFO - Connected to broker
+2024-07-10 01:42:16,269 - logger - INFO - Connected to broker
+2024-07-10 01:42:18,618 - logger - INFO - Connected to broker
+2024-07-10 10:32:20,075 - logger - INFO - Todo assigned suceessfully for employee:1
+2024-07-10 10:33:04,317 - logger - INFO - Task created successfully with id: 160
+2024-07-10 10:34:11,564 - logger - INFO - Task deleted successfully for id: 153
+2024-07-10 10:34:59,940 - logger - INFO - Fetched all the todo's of employee 1
+2024-07-10 10:41:43,943 - logger - INFO - Connected to broker
+2024-07-10 10:50:34,100 - logger - INFO - Connected to broker
+2024-07-10 10:58:55,234 - logger - INFO - Connected to broker
+2024-07-10 10:59:00,087 - logger - INFO - Connected to broker
+2024-07-10 10:59:55,125 - logger - INFO - employee created successfully with id: 6
+2024-07-10 11:02:58,930 - logger - INFO - Employee updated suceessfully for id:5
+2024-07-10 11:07:35,767 - logger - INFO - Connected to broker
+2024-07-10 11:07:40,455 - logger - INFO - Connected to broker
+2024-07-10 11:08:23,687 - logger - INFO - employee created successfully with id: 8
+2024-07-10 11:08:44,711 - logger - INFO - employee created successfully with id: 9
