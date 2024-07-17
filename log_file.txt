@@ -9,9 +9,6 @@
 2024-06-30 21:18:56,542 - __main__ - INFO - Task created successfully with id: 124
 2024-06-30 21:37:43,964 - __main__ - INFO - Connected to broker
 2024-06-30 21:45:38,515 - __main__ - INFO - Connected to broker
-2024-06-30 21:46:35,424 - __main__ - INFO - Task updated successfully for id: 118
-2024-06-30 21:48:02,728 - __main__ - INFO - Task updated successfully for id: 119
-2024-06-30 21:53:09,452 - __main__ - INFO - Task created successfully with id: 125
 2024-06-30 21:54:19,627 - __main__ - INFO - Task updated successfully for id: 125
 2024-06-30 22:08:22,328 - __main__ - INFO - Connected to broker
 2024-06-30 22:09:42,091 - __main__ - INFO - Task deleted successfully for id: 120
@@ -31,11 +28,6 @@
 2024-07-02 14:30:50,161 - app - INFO - Connected to broker
 2024-07-02 16:06:27,532 - __main__ - INFO - Connected to broker
 2024-07-02 16:06:32,159 - __main__ - INFO - Todo assigned suceessfully for employee:1
-2024-07-02 16:10:42,514 - __main__ - INFO - Todo assigned suceessfully for employee:1
-2024-07-02 16:11:00,355 - __main__ - INFO - Todo assigned suceessfully for employee:1
-2024-07-02 16:11:20,523 - __main__ - INFO - Todo assigned suceessfully for employee:2
-2024-07-02 16:11:35,474 - __main__ - INFO - Todo assigned suceessfully for employee:2
-2024-07-02 16:11:43,583 - __main__ - INFO - Todo assigned suceessfully for employee:2
 2024-07-02 16:11:48,383 - __main__ - INFO - Todo assigned suceessfully for employee:2
 2024-07-02 16:25:12,147 - __main__ - INFO - Connected to broker
 2024-07-02 16:28:08,486 - __main__ - INFO - Connected to broker
@@ -178,20 +170,6 @@
 2024-07-08 16:05:05,230 - app - INFO - client is connected rc:0 , flags: {'session present': 0}
 2024-07-08 16:05:05,230 - app - INFO - subscribed to mqtt topic: sample
 2024-07-09 00:21:43,632 - app - INFO - Connected to broker
-2024-07-09 00:31:45,664 - app - INFO - Connected to broker
-2024-07-09 00:48:50,033 - app - INFO - Connected to broker
-2024-07-09 00:54:25,885 - app - INFO - Connected to broker
-2024-07-09 00:59:47,787 - app - INFO - Connected to broker
-2024-07-09 01:00:48,471 - app - INFO - Connected to broker
-2024-07-09 01:02:51,340 - app - INFO - Connected to broker
-2024-07-09 01:03:56,693 - app - INFO - Connected to broker
-2024-07-09 01:04:17,677 - app - INFO - Connected to broker
-2024-07-09 01:06:11,276 - app - INFO - Connected to broker
-2024-07-09 10:43:35,569 - app - INFO - Connected to broker
-2024-07-09 10:54:53,964 - app - INFO - Connected to broker
-2024-07-09 10:58:33,417 - app - INFO - Connected to broker
-2024-07-09 11:00:53,064 - app - INFO - Connected to broker
-2024-07-09 11:01:46,107 - app - INFO - Connected to broker
 2024-07-09 11:02:08,303 - app - INFO - Connected to broker
 2024-07-09 11:26:39,672 - app - INFO - Connected to broker
 2024-07-09 11:26:40,695 - app - INFO - Task created successfully with id: 139
@@ -257,3 +235,79 @@
 2024-07-10 11:07:40,455 - logger - INFO - Connected to broker
 2024-07-10 11:08:23,687 - logger - INFO - employee created successfully with id: 8
 2024-07-10 11:08:44,711 - logger - INFO - employee created successfully with id: 9
+2024-07-10 11:58:34,597 - logger - INFO - Connected to broker
+2024-07-10 12:01:27,999 - logger - INFO - Task created successfully with id: 161
+2024-07-10 17:23:49,455 - logger - INFO - Connected to broker
+2024-07-11 16:35:51,281 - logger - INFO - Connected to broker
+2024-07-14 18:52:34,166 - logger - INFO - Connected to broker
+2024-07-14 19:53:32,156 - logger - INFO - Connected to broker
+2024-07-14 20:20:50,229 - logger - INFO - Connected to broker
+2024-07-14 20:21:47,655 - logger - INFO - Connected to broker
+2024-07-14 20:31:13,529 - logger - INFO - Connected to broker
+2024-07-14 20:33:08,903 - logger - INFO - Connected to broker
+2024-07-14 20:38:26,020 - logger - INFO - Connected to broker
+2024-07-14 20:40:00,860 - logger - INFO - Connected to broker
+2024-07-14 20:40:55,171 - logger - INFO - Connected to broker
+2024-07-14 20:43:58,680 - logger - INFO - Connected to broker
+2024-07-14 20:44:26,693 - logger - INFO - Connected to broker
+2024-07-14 20:45:34,291 - logger - INFO - Connected to broker
+2024-07-14 20:46:51,913 - logger - INFO - Connected to broker
+2024-07-14 20:48:30,874 - logger - INFO - Connected to broker
+2024-07-14 20:51:43,504 - logger - INFO - Connected to broker
+2024-07-14 20:51:49,457 - logger - INFO - Connected to broker
+2024-07-15 15:22:50,731 - logger - INFO - Connected to broker
+2024-07-15 16:33:48,774 - logger - INFO - Connected to broker
+2024-07-15 16:42:21,764 - logger - INFO - Connected to broker
+2024-07-15 16:53:09,256 - logger - INFO - Connected to broker
+2024-07-15 16:53:50,876 - logger - INFO - Connected to broker
+2024-07-15 16:54:04,884 - logger - INFO - Connected to broker
+2024-07-15 16:54:40,552 - logger - INFO - Connected to broker
+2024-07-15 16:55:12,753 - logger - INFO - Connected to broker
+2024-07-15 18:16:38,442 - logger - INFO - Connected to broker
+2024-07-15 18:18:29,147 - logger - INFO - Connected to broker
+2024-07-15 18:20:27,172 - logger - INFO - Connected to broker
+2024-07-15 18:21:56,455 - logger - INFO - Connected to broker
+2024-07-15 18:22:21,379 - logger - INFO - Connected to broker
+2024-07-15 18:23:44,697 - logger - INFO - Connected to broker
+2024-07-15 21:56:45,098 - logger - INFO - Connected to broker
+2024-07-15 22:01:49,554 - logger - INFO - Connected to broker
+2024-07-15 22:02:53,099 - logger - INFO - Connected to broker
+2024-07-16 07:10:48,328 - logger - INFO - Connected to broker
+2024-07-16 07:13:48,143 - logger - INFO - Connected to broker
+2024-07-16 07:18:48,834 - logger - INFO - Connected to broker
+2024-07-16 07:22:14,885 - logger - INFO - Connected to broker
+2024-07-16 07:23:47,912 - logger - INFO - Connected to broker
+2024-07-16 07:28:37,929 - logger - INFO - Connected to broker
+2024-07-16 07:34:49,281 - logger - INFO - Connected to broker
+2024-07-16 07:40:46,796 - logger - INFO - Connected to broker
+2024-07-16 07:43:21,654 - logger - INFO - Connected to broker
+2024-07-16 07:48:09,493 - logger - INFO - Connected to broker
+2024-07-16 07:50:06,216 - logger - INFO - Connected to broker
+2024-07-16 07:54:35,753 - logger - INFO - Connected to broker
+2024-07-16 07:56:41,054 - logger - INFO - Connected to broker
+2024-07-16 07:59:51,174 - logger - INFO - Connected to broker
+2024-07-16 08:03:09,467 - logger - INFO - Connected to broker
+2024-07-16 08:04:24,835 - logger - INFO - Connected to broker
+2024-07-16 08:12:37,545 - logger - INFO - Connected to broker
+2024-07-16 08:15:34,810 - logger - INFO - Connected to broker
+2024-07-16 08:19:02,430 - logger - INFO - Connected to broker
+2024-07-16 08:22:39,968 - logger - INFO - Connected to broker
+2024-07-16 08:42:04,365 - logger - INFO - Connected to broker
+2024-07-16 11:33:57,743 - logger - INFO - Connected to broker
+2024-07-16 11:34:43,849 - logger - INFO - Connected to broker
+2024-07-16 11:35:26,687 - logger - INFO - Connected to broker
+2024-07-16 11:42:23,144 - logger - INFO - Connected to broker
+2024-07-16 11:49:47,179 - logger - INFO - Connected to broker
+2024-07-16 11:50:49,337 - logger - INFO - Connected to broker
+2024-07-16 11:52:05,896 - logger - INFO - Connected to broker
+2024-07-16 12:03:45,478 - logger - INFO - Connected to broker
+2024-07-16 12:19:04,219 - logger - INFO - Connected to broker
+2024-07-16 12:20:46,928 - logger - INFO - Connected to broker
+2024-07-16 13:33:34,596 - logger - INFO - Connected to broker
+2024-07-16 13:38:03,381 - logger - INFO - Connected to broker
+2024-07-16 13:40:57,625 - logger - INFO - Connected to broker
+2024-07-16 14:14:45,818 - logger - INFO - Connected to broker
+2024-07-16 14:19:03,813 - logger - INFO - Connected to broker
+2024-07-16 14:21:58,041 - logger - INFO - Connected to broker
+2024-07-16 14:27:08,571 - logger - INFO - Connected to broker
+2024-07-16 14:28:33,139 - logger - INFO - Connected to broker

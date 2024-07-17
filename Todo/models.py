@@ -1,6 +1,8 @@
 from db import db
 from datetime import datetime, timezone
 from Employee.models import Employee
+
+
 class Todo(db.Model): #Defining the schema of the database using class
     sno = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(200), nullable=False)
@@ -10,5 +12,4 @@ class Todo(db.Model): #Defining the schema of the database using class
     # when you want to print the object of this class what do you want to see
     def __repr__(self) -> str:
         return f"<Todo {self.sno} - {self.id, self.title}>"
-    
 

@@ -1,5 +1,5 @@
 
-
+'''
 
 #*****************************************************
 """mqtt server connections and mqtt built in methods"""
@@ -63,3 +63,5 @@ def on_disconnect(client, userdata, rc):
         client.reconnect()
     except Exception as err:
         logger.error("Mqtt Error in on_disconnect-" + str(err))
+
+'''
