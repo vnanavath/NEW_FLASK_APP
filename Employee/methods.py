@@ -17,8 +17,8 @@ def create_data(client, userdata, message):
             db.session.commit()
             client.publish("store_msg", f"employee created successfully with id: {emp.emp_id}")
     except Exception as e:
-        client.publish("store_msg",f"Failed to create employee")
         print(e)
+        client.publish("store_msg",f"Failed to create employee")
         
 
 def update_data(client, userdata, message):
@@ -39,8 +39,8 @@ def update_data(client, userdata, message):
             db.session.commit()
             client.publish("store_msg", f"Employee upated successfully for id {emp_id}")
     except Exception as e:
-        client.publish("store_msg",f"Failed to update employee")
         print(e)
+        client.publish("store_msg",f"Failed to update employee")
         
             
 def delete_data(client, userdata, message):
@@ -58,5 +58,6 @@ def delete_data(client, userdata, message):
             db.session.commit()
             client.publish("store_msg", f"Employee deleted successfully for id: {emp_id}")
     except Exception as e:
-        client.publish("store_msg",f"Filed to delete Employee")
         print(e)
+        client.publish("store_msg",f"Filed to delete Employee")
+        

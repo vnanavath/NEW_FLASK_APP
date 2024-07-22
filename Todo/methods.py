@@ -16,7 +16,8 @@ def create_data(client, userdata, message):
             db.session.commit()
             client.publish("store_msg", f"Todo created successfully with id: {todo.sno}")
     except Exception as e:
-        client.publish("store_msg",f"Failed to create todo: \n{e}")
+        print(e)
+        client.publish("store_msg",f"Failed to create todo")
 
 
 # this method includes both employee assigning to todo, and each toso update
@@ -58,8 +59,9 @@ def update_data(client, userdata, message):
             db.session.commit()  # No need to add the todo again, just commit changes
             client.publish("store_msg", f"Task updated successfully for id: {sno}")
     except Exception as e:
-        # print(f"\n13)checking update_fun using testing")
-        client.publish("store_msg",f"Failed to update todo: \n{e}")
+        # print(f"\n13)checking update_fun using testing")\
+        print(e)
+        client.publish("store_msg",f"Failed to update todo")
 
 
 def delete_data(client, userdata, message):
@@ -77,4 +79,5 @@ def delete_data(client, userdata, message):
             db.session.commit()
             client.publish("store_msg", f"Task deleted successfully for id: {sno}")
     except Exception as e:
-        client.publish("store_msg",f"Failed to delete todo: \n{e}")
+        print(e)
+        client.publish("store_msg",f"Failed to delete todo")

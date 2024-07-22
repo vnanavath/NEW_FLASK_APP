@@ -83,5 +83,6 @@ def emp_tasks(employee_id):
             })
         CLIENT.publish("store_msg", f"Fetched all the todo's of employee {employee_id}")
         return jsonify({"message": temp}), 200
-    except:
-        return jsonify({"message": "Failed to fetch employee's Todo"}), 400
+    except Exception as e:
+        print(e)
+        return jsonify({"message":"Failed to fetch employee's Todo", "error":str(e)}), 400

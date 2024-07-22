@@ -48,6 +48,7 @@ def test_api(client,dbsession):
     assert response.status_code == 200
     assert response.get_json() == {"message": "Employee sent for deletion successfully"}
 
+
     '''Testing Employee get'''
     emp1 = Employee( emp_id = 1, emp_name = "vikas")
     emp2 = Employee(emp_id = 2, emp_name = "rathod")
@@ -58,6 +59,7 @@ def test_api(client,dbsession):
         response = test_client.get("/employee/fetch", json = {})
     assert response.status_code == 200
     assert response.get_json() == {"message":[{"emp_id":1,"emp_name":"vikas"}, {"emp_id":2,"emp_name":"rathod"}]}
+
 
     '''Testing Todo get'''
     todo1 = Todo(sno = 1, title = "title1", desc = "description1", employee_id = 1)
@@ -70,26 +72,8 @@ def test_api(client,dbsession):
     assert response.status_code == 200
     assert response.get_json() == {"message":[{"title" : "title1", "desc" : "description1"}, {"title" : "title2", "desc" : "description2"}]}
 
-    '''Testing fetching all the todos of a employee'''
 
-# @todo_bp.route("/employeeTodo/<int:employee_id>", methods=['GET'])
-# def emp_tasks(employee_id):
-#     try:
-#         from mqtt_local import mqtt_client as CLIENT
-#         from Todo.models import Todo
-#         empTodos = Todo.query.filter_by(employee_id = employee_id).all()
-#         temp = []
-#         for item in empTodos:
-#             temp.append({
-#                 # 'sno':item.sno,
-#                 'title':item.title,
-#                 'desc':item.desc,
-#                 # 'employee_id':item.employee_id
-#             })
-#         CLIENT.publish("store_msg", f"Fetched all the todo's of employee {employee_id}")
-#         return jsonify(temp)
-#     except:
-#         return jsonify({"message": "Failed to fetch employee's Todo"}), 400
+    '''Testing fetching all the todos of a employee'''
     with patch("app.db.session", new = dbsession), patch("mqtt_local.mqtt_client", return_value = mock_mqtt_client):
         response = test_client.get("/todo/employeeTodo/1", json = {})
     assert response.status_code == 200
@@ -134,6 +118,26 @@ def test_api(client,dbsession):
     assert response.get_json() == {"message": "Failed to delete employee", "error":"MQTT client is down"}
 
 
+    '''Testing get when mqtt client is down'''
+    with patch("app.db.session", new = dbsession):
+        response = test_client.get("/todo/fetch", json = {})
+    assert response.status_code == 400
+    assert response.get_json() == {"message": "Failed to fetch todo's", "error":"MQTT client is down"}
+
+
+    with patch("app.db.session", new = dbsession):
+        response = test_client.get("/todo/employeeTodo/1", json = {})
+    assert response.status_code == 400
+    assert response.get_json() == {"message":"Failed to fetch employee's Todo", "error":"MQTT client is down"}
+
+
+    with patch("app.db.session", new = dbsession):
+        response = test_client.get("/employee/fetch", json = {})
+    assert response.status_code == 400
+    assert response.get_json() == {"message": "Failed to fetch employees", "error":"MQTT client is down"}
+
+
+
 
 # #Testing methods
 def test_todo_create_data(dbsession, mock_app):
@@ -147,6 +151,15 @@ def test_todo_create_data(dbsession, mock_app):
     assert new_todo.title == "Alice"
     assert new_todo.desc == "Hello"
     client.publish.assert_called_with("store_msg", f"Todo created successfully with id: {new_todo.sno}")
+
+def test_todo_create_data_exceptoin(dbsession, mock_app):
+    client = MagicMock()
+    message = MagicMock()
+    message.payload.decode.return_value = "Hello"
+    with patch('app.db.session', new = dbsession), patch('app.app', return_value=mock_app):
+        t_methods.create_data(client, None, message)
+    client.publish.assert_called_with("store_msg", f"Failed to create todo")
+
 
 
 def test_todo_update_data(dbsession, mock_app):
@@ -168,6 +181,44 @@ def test_todo_update_data(dbsession, mock_app):
     client.publish.assert_called_with("store_msg", f"Task updated successfully for id: {sno}")
 
 
+def test_todo_update_data_when_assiging_to_employee(dbsession, mock_app):
+    client = MagicMock()
+    message = MagicMock()
+    todo = Todo(title = 'title', desc = 'description')
+    emp = Employee(emp_id = 1, emp_name = "vikas")
+    dbsession.add_all({todo,emp})
+    dbsession.commit()
+    sno = str(todo.sno)
+    employee_id = 1
+    payload = "title,description,"+str(sno)+","+str(employee_id)
+    message.payload.decode.return_value = payload
+    with patch('app.db.session', new = dbsession), patch('app.app', return_value=mock_app):
+        t_methods.update_data(client, None, message)
+    updated_todo_with_employee = dbsession.query(Todo).filter_by(sno=todo.sno).one()
+    assert updated_todo_with_employee.title == "title"
+    assert updated_todo_with_employee.desc == "description"
+    assert updated_todo_with_employee.employee_id == 1
+    client.publish.assert_called_with("store_msg", f"Task updated successfully for id: {sno}")
+
+
+
+
+def test_todo_update_data_exceptoin(dbsession, mock_app):
+    client = MagicMock()
+    message = MagicMock()
+    todo = Todo(title = 'title', desc = 'description')
+    dbsession.add(todo)
+    dbsession.commit()
+    sno = str(todo.sno)
+    employee_id = None
+    payload = "updated_title,updated_description,"+","+ "None"
+    message.payload.decode.return_value = payload
+    with patch('app.db.session', new = dbsession), patch('app.app', return_value=mock_app):
+        t_methods.update_data(client, None, message)
+    client.publish.assert_called_with("store_msg", f"Failed to update todo")
+
+
+
 def test_todo_delete_data(dbsession, mock_app):
     client = MagicMock()
     message = MagicMock()
@@ -182,6 +233,19 @@ def test_todo_delete_data(dbsession, mock_app):
     client.publish.assert_called_with("store_msg", f"Task deleted successfully for id: {todo.sno}")
 
 
+def test_todo_delete_data_exception(dbsession, mock_app):
+    client = MagicMock()
+    message = MagicMock()
+    todo = Todo(title = "title", desc = "description")
+    dbsession.add(todo)
+    dbsession.commit()
+    message.payload.decode.return_value = str(13)
+    with patch('app.db.session', new = dbsession), patch('app.app', return_value=mock_app):
+        t_methods.delete_data(client, None, message)
+    client.publish.assert_called_with("store_msg",f"Failed to delete todo")
+
+
+'''Testing the methods of the employee'''
 def test_employee_create_data(dbsession, mock_app):
     client = MagicMock()
     message = MagicMock()
@@ -193,6 +257,15 @@ def test_employee_create_data(dbsession, mock_app):
     assert new_emp.emp_id == 1
     assert new_emp.emp_name == "vikas"
     client.publish.assert_called_with("store_msg", f"employee created successfully with id: {new_emp.emp_id}")
+
+
+def test_employee_create_data_exception(dbsession, mock_app):
+    client = MagicMock()
+    message = MagicMock()
+    message.payload.decode.return_value = "vikas"
+    with patch('app.db.session', new = dbsession), patch('app.app', return_value=mock_app):
+        e_methods.create_data(client, None, message)
+    client.publish.assert_called_with("store_msg", f"Failed to create employee")
 
 
 def test_employee_update_data(dbsession, mock_app):
@@ -210,6 +283,16 @@ def test_employee_update_data(dbsession, mock_app):
     client.publish.assert_called_with("store_msg", f"Employee upated successfully for id {emp.emp_id}")
 
 
+def test_employee_update_data_exception(dbsession, mock_app):
+    client = MagicMock()
+    message = MagicMock()
+    message.payload.decode.return_value = "vikas"
+    with patch('app.db.session', new = dbsession), patch('app.app', return_value=mock_app):
+        e_methods.update_data(client, None, message)
+    client.publish.assert_called_with("store_msg", f"Failed to update employee")
+
+
+
 def test_employee_delete_data(dbsession, mock_app):
     client = MagicMock()
     message = MagicMock()
@@ -224,15 +307,29 @@ def test_employee_delete_data(dbsession, mock_app):
     client.publish.assert_called_with("store_msg", f"Employee deleted successfully for id: {emp.emp_id}")
 
 
-'''Testing Employee get'''
-# def test_get_employees(client,dbsession):
-#     test_client, mock_mqtt_client = client
-#     emp1 = Employee(emp_id = 1, emp_name = "vikas")
-#     emp2 = Employee(emp_id = 2, emp_name = "rathod")
-#     dbsession.add(emp1)
-#     dbsession.add(emp2)
-#     dbsession.commit()
-#     with patch("app.db.session", new = dbsession), patch("mqtt_local.mqtt_client", return_value = mock_mqtt_client):
-#         response = test_client.get("/employee/fetch", json = {})
-#     assert response.status_code == 200
-#     assert response.get_json() == {"message":[{"emp_id":1,"emp_name":"vikas"}, {"emp_id":2,"emp_name":"rathod"}]}
+def test_employee_delete_data_exception(dbsession, mock_app):
+    client = MagicMock()
+    message = MagicMock()
+    emp = Employee(emp_id = 1, emp_name = 'rathod')
+    dbsession.add(emp)
+    dbsession.commit()
+    message.payload.decode.return_value = str(12)
+    with patch('app.db.session', new = dbsession), patch('app.app', return_value=mock_app):
+        e_methods.delete_data(client, None, message)
+    client.publish.assert_called_with("store_msg", f"Filed to delete Employee")
+
+
+'''Testing Employee Model'''
+def test_employee_model(dbsession, mock_app):
+    emp = Employee(emp_id = 1, emp_name = 'rathod')
+    dbsession.add(emp)
+    dbsession.commit()
+    assert repr(emp) == "<Employee rathod>"
+
+
+'''Testing Todo Model'''
+def test_todo_model(dbsession, mock_app):
+    todo = Todo(title = 'title', desc = 'rathod')
+    dbsession.add(todo)
+    dbsession.commit()
+    assert repr(todo) == f"<Todo {todo.sno} - {todo.title, todo.desc}>"

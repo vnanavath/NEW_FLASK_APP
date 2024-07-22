@@ -11,5 +11,6 @@ class Todo(db.Model): #Defining the schema of the database using class
     employee_id = db.Column(db.Integer, db.ForeignKey('employee.emp_id'))
     # when you want to print the object of this class what do you want to see
     def __repr__(self) -> str:
-        return f"<Todo {self.sno} - {self.id, self.title}>"
-
+        return f"<Todo {self.sno} - {self.title, self.desc}>"
+    
+    
