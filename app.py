@@ -6,9 +6,9 @@ import mqtt_local
 from mysql_configeration import MysqlConfig
 from flask import Flask, render_template, request, redirect, jsonify, Blueprint
 from datetime import datetime, timezone
-from flask_migrate import Migrate
+from flask_migrate import Migrate # type: ignore
 from db import db
-from flask_cors import CORS
+from flask_cors import CORS # type: ignore
 from Todo.routes import todo_bp
 from Employee import routes
 
@@ -32,7 +32,7 @@ def home():
     # from Todo.models import Todo
     # allTodo = Todo.query.all()
     # return render_template("index.html", allTodo = allTodo)
-    return "Hello World!"
+    return "Welcome to the TODO LIST!!"
 
 
 app.register_blueprint(routes.employee_bp, url_prefix="/employee")
